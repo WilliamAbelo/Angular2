@@ -6,22 +6,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 const core_1 = require("@angular/core");
-const contatos_lista_Component_1 = require("./contatos-lista.Component");
-const common_1 = require("@angular/common");
-let ContatosModule = class ContatosModule {
+const contatos_mock_1 = require("./contatos-mock");
+let ContatosListaComponent = class ContatosListaComponent {
+    constructor() {
+        this.contatos = contatos_mock_1.CONTATOS;
+    }
 };
-ContatosModule = __decorate([
-    core_1.NgModule({
-        imports: [
-            common_1.CommonModule
-        ],
-        declarations: [
-            contatos_lista_Component_1.ContatosListaComponent
-        ],
-        exports: [
-            contatos_lista_Component_1.ContatosListaComponent
-        ]
+ContatosListaComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'contatos-lista',
+        templateUrl: 'contatos-lista.component.html'
     })
-], ContatosModule);
-exports.ContatosModule = ContatosModule;
-//# sourceMappingURL=contatos.module.js.map
+], ContatosListaComponent);
+exports.ContatosListaComponent = ContatosListaComponent;
+//# sourceMappingURL=contatos-lista.Component.js.map
